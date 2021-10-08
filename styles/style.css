@@ -1,11 +1,19 @@
-/* fonts */
+/*--------
+ fonts 
+ ---------*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-/* common style or utilities */
+
+/*---------
+ common style or utilities 
+ ---------------*/
 body{
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
-button{
+.click-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #E02C6D;
     width: 123px;
     height: 42px;
@@ -16,34 +24,199 @@ a{
     text-decoration: none;
     color: white;
 }
-.white-text{
-    color: white;
+img{
+    width: 100%;
 }
 
-
-
-/* top banner style */
+/* ---------
+navigation style 
+--------------*/
 nav{
     background-color: #2D25A0;
-    height: 667px;
-    padding-left: 156px;
-    padding-right: 124px;
-    padding-top: 42px;
+    padding: 42px 124px 86px 156px;
 }
 .menu-bar{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 67px;
 }
 .menu{
-    width: 587px;
     display: flex;
     justify-content: space-between;
 }
-.banner-title{
-    font-weight: bold;
-    font-size: 64px;
-    width: 485px;
-    height: 230px;
+.menu a{
+    padding-right: 36px;
 }
 
+/* ----------- 
+banner style 
+-----------  */
+.banner{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+}
+
+h1{
+    color: white;
+    font-size: 64px;
+}
+.live-button{
+    width: 168px;
+    height: 44px;
+}
+
+.banner-thumbline img{
+    width: 556px;
+    height: 438px;
+}
+
+
+/* ----------- 
+player style
+-----------  */
+.players{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 30px;
+    margin-top: 70px;
+    margin-left: 180px;
+    margin-right: 210px;
+}
+
+.player{
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    margin-bottom: 27px;
+}
+h5{
+    font-size: 28px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+.player-details{
+    font-size: 16px;
+    margin: 0;
+}
+
+/* ----------- 
+highlights style
+-----------  */
+
+.highlights{
+    margin: 138px 156px 158px 182px;
+}
+
+.highlight-thumbline img{
+    width: 567px;
+    height: 427px;
+}
+
+/* ----------- 
+footer style
+-----------  */
+.bottom-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 63px;
+}
+
+.logo{
+    width: 483px;
+    height: 110px;
+    align-items: center;
+}
+
+.social-circle{
+    background-color: rgb(221, 221, 221);
+    padding: 8px;
+    border-radius: 50%;
+    margin: 7px;
+    width: 17px;
+    height: 17px;
+    color: #969BAB;;
+}
+
+.copyright{
+    font-size: 18px;
+}
+
+/* ---------
+Mobile evices  
+--------------*/
+@media only screen and (max-width:688px){
+    h1{
+        font-size: 36px;
+    } 
+    .banner-thumbline img{
+        width: 329px;
+        height: 259px;
+    }
+    .banner{
+        grid-template-columns:repeat(1, 1fr) ;
+    }
+    .players{
+        grid-template-columns:repeat(1, 1fr) ;
+        margin:47px 15px 0px;
+    }
+    .player{ 
+        margin-bottom:24px;
+    }
+    .highlights{
+        margin: 36px 15px 43px;
+    }
+    .highlight-thumbline img{
+        width: 328px;
+        height: 248px;
+    }
+    .bottom-part{
+        margin-bottom:187px;
+    }
+    .logo{
+        width: 271px;
+        height: 63px;
+    }
+}
+/*----------
+ tablet evices  
+ -------------*/
+@media only screen and (min-width:689px) and (max-width:992px){
+    h1{
+        font-size: 36px;
+    } 
+    .banner-thumbline img{
+        width: 329px;
+        height: 259px;
+    }
+    .banner{
+        grid-template-columns:repeat(2, 1fr) ;
+    }
+    .players{
+        grid-template-columns:repeat(2, 1fr) ;
+        margin:47px 15px 0px;
+    }
+    .player{ 
+        margin-bottom:24px;
+    }
+    .highlights{
+        margin: 36px 15px 43px;
+    }
+    .highlight-thumbline img{
+        width: 328px;
+        height: 248px;
+    }
+    .bottom-part{
+        margin-bottom:187px;
+    }
+    .logo{
+        width: 271px;
+        height: 63px;
+    }
+    
+    
+}
